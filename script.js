@@ -63,6 +63,9 @@ const updateDisplay = (text) => {
   }
   else {
     if (!changeToPreviousOperand){
+      if (currentOperand.textContent.length > 13){
+        return;
+      }
       currentOperand.textContent += text;
     }
     // do not allow a number after a calculation (only symbols).
